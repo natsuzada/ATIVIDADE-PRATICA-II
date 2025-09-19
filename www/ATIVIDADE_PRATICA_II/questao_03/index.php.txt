@@ -1,0 +1,27 @@
+<?php
+                                
+                                // QUESTÃO 3 //
+
+$produtos = [];
+
+for ($i = 0; $i < 4; $i++) {
+    echo "Digite o nome do produto " . ($i + 1) . ": ";
+    $nome = trim(fgets(STDIN));
+    
+    echo "Digite a quantidade de $nome: ";
+    $quantidade = intval(trim(fgets(STDIN)));
+    
+    echo "Digite o preço unitário de $nome: ";
+    $preco = floatval(trim(fgets(STDIN)));
+    
+    $produtos[] = ['nome' => $nome, 'quantidade' => $quantidade, 'preco' => $preco];
+}
+
+echo "\nTabela de Produtos:\n";
+echo "Nome\tQuantidade\tPreço Unitário\tTotal\n";
+foreach ($produtos as $produto) {
+    $total = $produto['quantidade'] * $produto['preco'];
+    echo $produto['nome'] . "\t" . $produto['quantidade'] . "\t\t" . $produto['preco'] . "\t\t" . $total . "\n";
+}
+
+?>

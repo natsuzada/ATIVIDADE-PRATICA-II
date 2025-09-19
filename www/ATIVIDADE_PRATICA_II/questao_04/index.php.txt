@@ -1,0 +1,39 @@
+<?php
+
+                                // Questão 4 //
+
+$matriz1 = [];
+$matriz2 = [];
+
+echo "Digite os valores para a Matriz 1 (3x3):\n";
+for ($i = 0; $i < 3; $i++) {
+    for ($j = 0; $j < 3; $j++) {
+        echo "Digite o valor para a posição ($i,$j): ";
+        $matriz1[$i][$j] = intval(trim(fgets(STDIN)));
+    }
+}
+
+echo "Digite os valores para a Matriz 2 (3x3):\n";
+for ($i = 0; $i < 3; $i++) {
+    for ($j = 0; $j < 3; $j++) {
+        echo "Digite o valor para a posição ($i,$j): ";
+        $matriz2[$i][$j] = intval(trim(fgets(STDIN)));
+    }
+}
+
+$matrizResultado = [];
+for ($i = 0; $i < 3; $i++) {
+    for ($j = 0; $j < 3; $j++) {
+        $matrizResultado[$i][$j] = $matriz1[$i][$j] + $matriz2[$i][$j];
+    }
+}
+
+echo "\nMatriz Resultante (Soma das Matrizes 1 e 2):\n";
+for ($i = 0; $i < 3; $i++) {
+    for ($j = 0; $j < 3; $j++) {
+        echo $matrizResultado[$i][$j] . " ";
+    }
+    echo "\n";
+}
+
+?>

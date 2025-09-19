@@ -1,0 +1,17 @@
+<?php
+
+                                // QUESTÃO 1 //
+$frutas = [];
+for ($i = 0; $i < 5; $i++) {
+    echo "Digite o nome da fruta " . ($i + 1) . ": ";
+    $fruta = trim(fgets(STDIN));
+    $frutas[] = $fruta; // Adiciona a fruta no array
+}
+
+sort($frutas);
+
+echo "\nFrutas em ordem alfabética:\n";
+foreach ($frutas as $fruta) {
+    echo $fruta . "\n";
+}
+?>
